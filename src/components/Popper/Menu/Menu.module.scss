@@ -1,0 +1,19 @@
+.menu-list {
+    width: 260px;
+
+    .menu-item {
+        margin-left: 0px;
+        border-radius: 0;
+    }
+}
+
+.menu-popper {
+}
+
+// Menu items
+.menu-item {
+    font-weight: 400;
+    &:hover {
+        background-color: var(--primary);
+    }
+}
