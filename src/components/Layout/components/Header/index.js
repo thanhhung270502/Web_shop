@@ -3,9 +3,9 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faSortDown } from '@fortawesome/free-solid-svg-icons';
 
-import Tippy from '@tippyjs/react/headless';
+// import Tippy from '@tippyjs/react/headless';
 
-import { Wrapper as PopperWrapper } from '~/components/Popper';
+// import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Header.module.scss';
 // import images from '~/assets/images';
 // import AccountItem from '~/components/AccountItem';
@@ -17,12 +17,46 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faSortDown} />,
         title: 'Áo',
-        to: '/ao',
+        // to: '/ao',
+        children: {
+            title: 'Áo',
+            data: [
+                {
+                    type: 'ao',
+                    title: 'Áo Thun',
+                },
+                {
+                    type: 'ao',
+                    title: 'Áo Polo',
+                },
+                {
+                    type: 'ao',
+                    title: 'Áo Sơ Mi',
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faSortDown} />,
         title: 'Quần',
-        to: '/quan',
+        // to: '/quan',
+        children: {
+            title: 'Quần',
+            data: [
+                {
+                    type: 'quan',
+                    title: 'Quần Tây',
+                },
+                {
+                    type: 'quan',
+                    title: 'Quần Jean',
+                },
+                {
+                    type: 'quan',
+                    title: 'Quần Short',
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faSortDown} />,
@@ -39,6 +73,17 @@ function Header() {
     //         setMenuResult([1, 2, 3]);
     //     }, 0);
     // }, []);
+
+    // Handle Logic
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                // Handle change language
+                break;
+            default:
+        }
+    };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('logo')}>
@@ -53,7 +98,7 @@ function Header() {
                         Home
                     </a>
                 </div>
-                <Menu items={MENU_ITEMS}>
+                <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                     <div className={cx('menu-place')}>
                         <a href="/">
                             Shop
