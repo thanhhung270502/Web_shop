@@ -86,11 +86,11 @@ function Header() {
 
     return (
         <header className={cx('wrapper')}>
-            <div className={cx('logo')}>
+            {/* <div className={cx('logo')}>
                 <div className={cx('inner-logo')}>
                     <span>L</span>O<span>G</span>O
                 </div>
-            </div>
+            </div> */}
 
             <div className={cx('menu')}>
                 <div className={cx('li')}>

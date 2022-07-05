@@ -7,12 +7,12 @@
     --black: #000;
     --text-color: #333;
     --blue-black: #161d27;
-    --white: #fff;
+    --white: #f3f3f4;
     --yellow: #ffc174;
 
     // Default layout
-    --default-layout-header-height: 160px;
-    --default-layout-width: 1150px;
+    --default-layout-header-height: 70px;
+    --default-layout-width: 140rem;
     --default-layout-horizontal-spacer: 24px;
 }
 
@@ -28,11 +28,13 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
+    height: 300vh;
 }
 
 button,
@@ -49,4 +51,10 @@ li {
 a[href] {
     // color: var(--text-color);
     text-decoration: none;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('/assets/Fonts/Font_Header.woff2');
+    font-weight: 300;
 }

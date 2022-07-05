@@ -1,0 +1,31 @@
+.wrapper {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.title {
+    padding: 20px 0;
+    font-size: 3rem;
+}
+
+.carousel {
+    width: var(--default-layout-width);
+}
+
+.carousel__inner {
+    width: 100%;
+}
+
+.carousel__image {
+    width: 100%;
+}
+
+.carousel__button {
+    padding: 10px 0;
+}
+
+.carousel__icon {
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 10px 12px;
+}

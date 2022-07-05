@@ -6,9 +6,18 @@
 
 .container {
     width: var(--default-layout-width);
-    display: flex;
+    margin-top: 70px;
+    text-align: center;
 }
 
 .content {
     flex: 1;
+}
+
+.banner {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
 }
